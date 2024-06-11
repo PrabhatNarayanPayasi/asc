@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: rgb(215, 215, 211);
+    }
+
+    .big {
+        /* display: flex;
+    justify-content: center; */
+        align-items: center;
+    }
+
+    .navbar {
+        background-color: rgb(175, 93, 233);
+        border: 2px solid white;
+        /* width: 100%vw; */
+        height: 60px;
+        margin: 20px 5px;
+        border-radius: 10px;
+
+    }
+
+
+
+    .navbar li {
+        float: left;
+        text-decoration: none;
+        list-style: none;
+        color: white;
+        margin: 15px 20px;
+        font-size: 20px;
+        font-weight: bold;
+        opacity: 1;
+    }
+
+    input {
+        float: right;
+        margin: 15px 10px;
+        text-align: center;
+        width: 190px;
+        height: 25px;
+        border: 4px white;
+        border-radius: 10px;
+    }
+
+    .img1 {
+        /* width: 15px 600px;
+        height: 800px; */
+        background-repeat: no-repeat;
+        opacity: 0;
+    }
+
+    h1 {
+        /* color:white; */
+        font-size: 50px;
+
+        width: 800px;
+        height: 100px;
+        text-align: center;
+        margin: 40px 340px;
+        color: rgb(92, 40, 165);
+    }
+
+    h2 {
+        font-size: 40px;
+        margin: 2px 40px;
+    }
+
+    .container {
+        display: flex;
+        border: 2px solid black;
+        height: 100%;
+        width: 600px;
+        margin: 0 auto;
+        /* background-color: aqua; */
+        padding: 20px;
+        border: 2px solid black;
+    }
+
+    .card {
+        width: 32%;
+        display: flex;
+        position: relative;
+        margin-bottom: 20px;
+        border-radius: 10px;
+
+    }
+
+    .card:hover {
+        transform: scale(1.03);
+        filter: drop-shadow(0 0 20px #333);
+        transition: 1s;
+     
+
+    }
+
+    .card img {
+        width: 100%;
+        height:100%;
+        object-fit: cover;
+        opacity: 1;
+        border-radius: 8px;
+        filter: grayscale(100%);
+        /* height: 100%; */
+    }
+
+    .galary {
+        display: flex;
+        flex-wrap: wrap;
+        /* height:auto; */
+        justify-content: space-between;
+        padding: 10px 10px;
+    }
+
+    .card figcaption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 25px;
+        width: 100%;
+        height: 20%;
+        font-size: 16px;
+
+        border-radius: 0 0 10px 10px;
+        background: linear-gradient(0deg rgba(50, 3, 3, 0.2) 0%, rgba(50, 6, 229, 0));
+
+        opacity: 0;
+        font-weight: 500;
+        font-size: 20px;
+        text-align: center;
+        transition: 0.3s;
+        color: rgb(110, 15, 15);
+        font-size: bold;
+    }
+
+    h2 {
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    li:hover {
+        background-color: aquamarine;
+        border-radius: 8px;
+    }
+
+    .card img:hover {
+        filter: grayscale(0%);
+        translate: scale(-10%);
+    }
+
+    .card:hover figcaption {
+        transform: translateY(-10%);
+        transition: 2s;
+        opacity: 1;
+    }
+
+    #card6 figcaption {
+        color: white;
+       
+    }
+
+    #card7 figcaption {
+        color: white;
+        /* height: 100px; */
+    }
+
+    #card2 figcaption {
+        color: white;
+    }
+    #card7{
+        height: 180px;
+    }
+    #card8{
+        height: 180px;
+    }
+    #card9{
+        height: 180px;
+    }
+
+    hr {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 1100px;
+        margin: 60px 200px;
+        background-color: black;
+        border-radius: 10px;
+        border: 2px solid black;
+    }
+
+    .img2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* border-radius:50%; */
+
+    }
+
+    img2 {
+        border-radius: 50%;
+        border: 2px solid black;
+    }
+
+    .info {
+        display: flex;
+        margin: 30px 100px;
+        gap: 300px;
+        justify-content: center;
+
+    }
+
+    p {
+        width: 500px;
+        color: red;
+    }
+
+    .para {
+        display: flex;
+        margin: 15px 100px;
+        gap: 200px;
+        justify-content: center;
+        text-align: center;
+        /* border:2px solid black; */
+    }
+
+    p {
+        /* border:2px solid black; */
+        /* gap:200px; */
+
+    }
+    @media (min-width:150px ) and (max-width: 800px) {
+ .container{
+    text-align: center;
+ }
+ .big{
+    justify-content:center;
+    text-align:center;
+ }
+ h1{
+    text-align: center;
+ }
+}
+   /* @media(min-width:200px) and (max-width:400px){
+   .navbar{
+     font-size: 20px; lvoergn
+
+     margin:20px 15px;
+     text-align:center;
+     text-decoration:none;background-color: yellow;
+   height:100%;
+    }
+    .galary{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .container{
+        width: auto;
+    }
+    .card{
+        height:auto;
+    }
+    h1{
+        /* text-align:center; */
+        font-size: 15px;
+    }
+   } */
+</style>
+
+<body>
+    <div class="big">
+        <header>
+            <nav class="navbar">
+                <ul>
+                    <li>Home</li>
+                    <li>About Us</li>
+                    <li>Contact Us</li>
+                    <li>Help</li>
+                    <li>Mail</li>
+                </ul>
+                <input type="text" id="input" placeholder="Go To Search">
+                <img1 src="C:\Users\prabh\Downloads\download (1).jfif">
+            </nav>
+            <h1>Resistration for Web Development Internship Program </h1>
+            <!-- <h2>Details for the Course :-</h2> -->
+        </header>
+        <div class="container">
+            <div class="img">
+                <h2>course overflow</h2>
+                <!-- <img src="C:\Users\prabh\Downloads\download (2).jfif">HTML</div>  -->
+                <div class="galary">
+                    <figure class="card" id="card1 ">
+                        <img src="C:\Users\prabh\Downloads\download (2).jfif">
+                        <figcaption>HTML</figcaption>
+                    </figure>
+                    <figure class="card" id="card2">
+                        <img src="C:\Users\prabh\Downloads\download (3).jfif">
+                        <figcaption>CSS</figcaption>
+                    </figure>
+                    <figure class="card" id="card3">
+                        <img src="C:\Users\prabh\Downloads\download (4).jfif">
+                        <figcaption>JAVASCRIPT</figcaption>
+                    </figure>
+                    <figure class="card" id="card4">
+                        <img src="C:\Users\prabh\Downloads\images.png">
+                        <figcaption>TAILWIND</figcaption>
+                    </figure>
+                    <figure class="card" id="card5">
+                        <img src="C:\Users\prabh\Downloads\download (5).jfif">
+                        <figcaption>REACT</figcaption>
+                    </figure>
+                    <figure class="card" id="card6">
+                        <img src="C:\Users\prabh\Downloads\download (3).png">
+                        <figcaption>MONGODB</figcaption>
+                    </figure>
+                    <figure class="card" id="card7">
+                        <img src="C:\Users\prabh\Downloads\download (2).png">
+                        <figcaption>ANGULAR</figcaption>
+                    </figure>
+                    <figure class="card" id="card8">
+                        <img src="C:\Users\prabh\Downloads\download (4).png">
+                        <figcaption>PhP</figcaption>
+                    </figure>
+                    <figure class="card" id="card9">
+                        <img src="C:\Users\prabh\Downloads\download (6).jfif">
+                        <figcaption>MySQL</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <h1>FOUNDER OF THE PROGRAM</h1>
+        <div class="img2">
+            <img src="C:\Users\prabh\Downloads\download (7).jfif ">
+        </div>
+        <div class="info">
+            <h3>EX :- Google</h3>
+            <h3>EX :- Microsoft</h3>
+            <h3> EX:-Twitter</h3>
+        </div>
+        <div class="para">
+            <p>Worked at <strong>Google</strong> with Exp.6years</p>
+            <p>Worked at <strong>Microsoft</strong> with Exp.6years</p>
+            <p>Worked at <strong>Twitter</strong> with Exp.6years</p>
+        </div>
+    </div>
+</body>
+
+</html>
